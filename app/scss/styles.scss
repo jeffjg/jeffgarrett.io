@@ -1,0 +1,37 @@
+@import 'base';
+@import 'variables';
+
+.main {
+	margin: 0 auto;
+	max-width: 1040px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.header {
+	height: 100vh;
+	background: $yellow;
+	display: flex;
+	align-items: center;
+
+	.main {
+		text-align: center;
+		font-size: 0.8rem;
+	}
+
+	.logo {
+		width: 20em;
+	}
+}
+
+.portfolio {
+	.project {
+		width: 45%;
+		margin-right: 5%;
+		float: left;
+		background: red;
+
+	}
+}
