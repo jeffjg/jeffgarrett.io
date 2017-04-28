@@ -1,5 +1,17 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
   font-family: 'Hind Siliguri', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -7,13 +19,16 @@ html {
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
   min-width: 300px;
-  font-size: 16px; }
-  @media screen and (min-width: 900px) {
+  font-size: 20px;
+  background: seashell; }
+  @media (min-width: 500px) {
     html {
-      font-size: 18px; } }
-  @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      background: paleGreen; } }
+  @media (min-width: 1024px) {
     html {
-      font-size: 20px; } }
+      font-size: 17px;
+      background: paleTurquoise; } }
 
 h1,
 h2,
@@ -21,8 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
-  margin: 0.8em 0; }
+  font-weight: bold; }
 
 h1 {
   font-size: 2.5em; }
@@ -43,13 +57,11 @@ h6 {
   font-size: 0.8em; }
 
 p {
-  font-size: 0.85em;
-  line-height: 1.5em;
-  margin-bottom: 0.8em; }
+  font-size: 1em; }
 
-.main {
+.wrapper {
   margin: 0 auto;
-  max-width: 1040px; }
+  max-width: 1024px; }
 
 img {
   max-width: 100%; }
@@ -59,14 +71,21 @@ img {
   background: #FFEB3B;
   display: flex;
   align-items: center; }
-  .header .main {
+  .header .wrapper {
     text-align: center;
     font-size: 0.8rem; }
   .header .logo {
     width: 20em; }
 
+section.section {
+  clear: both; }
+
 .portfolio .project {
-  width: 45%;
-  margin-right: 5%;
-  float: left;
-  background: red; }
+  padding: 1em 1.25em;
+  border: 1px solid red;
+  margin-bottom: 2em; }
+  @media (min-width: 500px) {
+    .portfolio .project {
+      width: 44%;
+      margin-right: 5%;
+      float: left; } }

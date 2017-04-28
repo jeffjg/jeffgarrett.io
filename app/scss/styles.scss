@@ -1,9 +1,9 @@
 @import 'base';
 @import 'variables';
 
-.main {
+.wrapper {
 	margin: 0 auto;
-	max-width: 1040px;
+	max-width: 1024px;
 }
 
 img {
@@ -16,7 +16,7 @@ img {
 	display: flex;
 	align-items: center;
 
-	.main {
+	.wrapper {
 		text-align: center;
 		font-size: 0.8rem;
 	}
@@ -26,12 +26,19 @@ img {
 	}
 }
 
+section.section {
+	clear: both;
+}
+
 .portfolio {
 	.project {
-		width: 45%;
-		margin-right: 5%;
-		float: left;
-		background: red;
-
+		padding: 1em 1.25em;
+		border: 1px solid red;
+		margin-bottom: 2em;
+		@include tablet {
+			width: 44%;
+			margin-right: 5%;
+			float: left;
+		}
 	}
 }
