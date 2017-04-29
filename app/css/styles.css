@@ -21,7 +21,7 @@ html {
   min-width: 300px;
   font-size: 20px;
   background: seashell; }
-  @media (min-width: 500px) {
+  @media (min-width: 660px) {
     html {
       font-size: 18px;
       background: paleGreen; } }
@@ -80,12 +80,17 @@ img {
 section.section {
   clear: both; }
 
+@media (min-width: 660px) {
+  .portfolio .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; } }
+
 .portfolio .project {
   padding: 1em 1.25em;
   border: 1px solid red;
   margin-bottom: 2em; }
-  @media (min-width: 500px) {
+  @media (min-width: 660px) {
     .portfolio .project {
-      width: 44%;
-      margin-right: 5%;
-      float: left; } }
+      flex-basis: calc(50%);
+      flex-direction: column; } }
